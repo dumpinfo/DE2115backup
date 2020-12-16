@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asmv1:assemblyIdentity name="Template.exe" version="1.0.0.0" publicKeyToken="cea11d7b6e630936" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Template" version="3.4.2.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Template.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CyUSB.dll" size="122880">
+      <assemblyIdentity name="CyUSB" version="3.4.6.0" publicKeyToken="01F1D2B6C851AE92" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>aWkcoHLtFa9TxHyAANz3F9Py6iU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Template.exe" size="90112">
+      <assemblyIdentity name="Template" version="3.4.2.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>js7pE55pZUtW+4lk8kkEHO2YeDU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=WUWEI\WeiWu" issuerKeyHash="1610d1dd37fc213c2ed901e7b2570561405c90fa" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Souys+dV3+2abtRMDA9FoW20Ktc=</DigestValue></Reference></SignedInfo><SignatureValue>Ym4Zkpa+s6jWF5KRj34KMFXi2Dd5He5Lux2TQpQUfgIokuuN9HgFyO7dsjuerl1s8bqfCbVirqv/haPWIWMu+wfTiohEjRK60LL/mqfBUZ8CBJ2dX4bTk4zRhw3gBHB5pS9MRtOaRsTUW7MT0qTVWZoLx3cZ3WRYVYpf7/Vweyc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yyAhHTbDC2B5hxikYzwGTF2A7qKJiGivQaPm8N5THS3E4de7y0XpNh9fbEE8sqChMhD4etJZW89dGM1RW0x/seXcyIVp6rYerSB5oAX6L1IA2VyYQlRhzeGvdFfTTbcDfvTcowNIVYXQKp+z6/FVt9ngz7YJIwGvl1r6qvS7f48=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d72ab46da1450f0c4cd46e9aeddf55e7b3b28b4a" Description="" Url=""><as:assemblyIdentity name="Template.exe" version="1.0.0.0" publicKeyToken="cea11d7b6e630936" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=WUWEI\WeiWu</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>X55r+3h7lKiUlxeB3fu35KgtRbw=</DigestValue></Reference></SignedInfo><SignatureValue>GYUhkHe9Uv4lKxYu5k8rx28pCh2xowiByFgOd7ieMSXlYXfa6EmVgCI3sGbkNgkXWkvVu8amfLL4yRtnFSwoFB8Zxj0HI3qUizFCDTJGOSCKLj2neRexUBKX3iu0ONmP61GoaG40j65yeJL4Wvg0O50FlxU3aovm7h/WJrOvAYI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yyAhHTbDC2B5hxikYzwGTF2A7qKJiGivQaPm8N5THS3E4de7y0XpNh9fbEE8sqChMhD4etJZW89dGM1RW0x/seXcyIVp6rYerSB5oAX6L1IA2VyYQlRhzeGvdFfTTbcDfvTcowNIVYXQKp+z6/FVt9ngz7YJIwGvl1r6qvS7f48=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASqgAwIBAgIQcBwAYuztfo5FyNGU/vgfCzAJBgUrDgMCHQUAMCExHzAdBgNVBAMeFgBXAFUAVwBFAEkAXABXAGUAaQBXAHUwHhcNMTEwNzEyMDY0MTQ2WhcNMTIwNzExMTI0MTQ2WjAhMR8wHQYDVQQDHhYAVwBVAFcARQBJAFwAVwBlAGkAVwB1MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLICEdNsMLYHmHGKRjPAZMXYDuoomIaK9Bo+bw3lMdLcTh17vLRek2H19sQTyyoKEyEPh60llbz10YzVFbTH+x5dzIhWnqth6tIHmgBfovUgDZXJhCVGHN4a90V9NNtwN+9NyjA0hVhdAqn7Pr8VW32eDPtgkjAa+XWvqq9Lt/jwIDAQABMAkGBSsOAwIdBQADgYEAKVme1dvW97LjSC01+bX+YM+bQlee2QyqOZMNjLfHGV63S9U9TvHb9eLvToIIYohKPRzYPmcOGsd8ZMynj+HtTK5gRP6kOBjVb4OkLcqdGYj5TJ2BvheUCfMIb+/Dr9Ne20LdMUZVnMLttw6hMYSsv3S+PwtfYZgVX4Mmb218JOs=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,25 @@
+!SESSION 2012-11-15 10:19:49.122 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-15 10:20:39.056
+!MESSAGE Indexed 'DE2_115_Audio_bsp' (83 sources, 62 headers) in 1.22 sec: 1,330 declarations; 4,265 references; 127 unresolved inclusions; 5 syntax errors; 236 unresolved names (4.05%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-15 10:20:42.606
+!MESSAGE Indexed 'DE2_115_Audio' (1 sources, 13 headers) in 0.02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 10:24:36.699
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 10:24:39.991
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/Administrator/Desktop/DE2_115_Audio/software/DE2_115_Audio/DE2_115_Audio.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 10:36:40.542
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 10:36:43.794
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/Administrator/Desktop/DE2_115_Audio/software/DE2_115_Audio/DE2_115_Audio.elf]

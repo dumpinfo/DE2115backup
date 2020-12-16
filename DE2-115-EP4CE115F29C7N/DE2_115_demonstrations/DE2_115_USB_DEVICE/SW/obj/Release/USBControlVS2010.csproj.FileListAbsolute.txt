@@ -1,0 +1,9 @@
+D:\de2_115_usb_software\bin\Release\USB_Control.exe.config
+D:\de2_115_usb_software\bin\Release\USB_Control.exe
+D:\de2_115_usb_software\bin\Release\USB_Control.pdb
+D:\de2_115_usb_software\obj\Release\ResolveAssemblyReference.cache
+D:\de2_115_usb_software\obj\Release\Template.Form1.resources
+D:\de2_115_usb_software\obj\Release\Template.Properties.Resources.resources
+D:\de2_115_usb_software\obj\Release\USBControlVS2010.csproj.GenerateResource.Cache
+D:\de2_115_usb_software\obj\Release\USB_Control.exe
+D:\de2_115_usb_software\obj\Release\USB_Control.pdb
