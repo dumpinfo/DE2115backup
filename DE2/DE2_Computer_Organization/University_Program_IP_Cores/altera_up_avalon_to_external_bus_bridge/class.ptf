@@ -1,0 +1,1048 @@
+#
+# DO NOT MODIFY THIS FILE
+#
+CLASS altera_up_avalon_to_external_bus_bridge
+{
+   CB_GENERATOR 
+   {
+      HDL_FILES 
+      {
+         FILE 
+         {
+            use_in_simulation = "1";
+            use_in_synthesis = "1";
+            type = "verilog";
+            filepath = "hdl/Altera_UP_Avalon_to_External_Bus_Bridge.v";
+         }
+         FILE 
+         {
+            use_in_simulation = "1";
+            use_in_synthesis = "1";
+            type = "vhdl";
+            filepath = "hdl/Altera_UP_Avalon_to_External_Bus_Bridge.vhd";
+         }
+      }
+      top_module_name = "Altera_UP_Avalon_to_External_Bus_Bridge.v:Altera_UP_Avalon_to_External_Bus_Bridge";
+      emit_system_h = "0";
+      LIBRARIES 
+      {
+      }
+   }
+   MODULE_DEFAULTS global_signals
+   {
+      class = "altera_up_avalon_to_external_bus_bridge";
+      class_version = "6.0";
+      SYSTEM_BUILDER_INFO 
+      {
+         Instantiate_In_System_Module = "1";
+         Has_Clock = "1";
+		 Default_Module_Name = "avalon_to_external_bus_bridge";
+         Top_Level_Ports_Are_Enumerated = "1";
+      }
+      COMPONENT_BUILDER 
+      {
+         GLS_SETTINGS 
+         {
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT clk
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "clk";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT reset
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "reset";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+      }
+      WIZARD_SCRIPT_ARGUMENTS 
+      {
+
+		Size_Value = "4";
+		Size_Multiple = "1";
+
+         hdl_parameters 
+         {
+            addr_bits = "18";
+            data_bits = "16";
+            addr_low = "1";
+            byte_en_bits = "2";
+         }
+      }
+      SIMULATION 
+      {
+         DISPLAY 
+         {
+         }
+      }
+      SLAVE avalon_slave
+      {
+         SYSTEM_BUILDER_INFO 
+         {
+            Bus_Type = "avalon";
+            Address_Group = "1";
+            Has_Clock = "0";
+            Address_Width = "-1";
+            Address_Alignment = "dynamic";
+            Data_Width = "8";
+            Has_Base_Address = "1";
+            Has_IRQ = "0";
+            Setup_Time = "0";
+            Hold_Time = "0";
+            Read_Wait_States = "peripheral_controlled";
+            Write_Wait_States = "peripheral_controlled";
+            Read_Latency = "1";
+            Maximum_Pending_Read_Transactions = "0";
+            Active_CS_Through_Read_Latency = "0";
+            Is_Printable_Device = "0";
+            Is_Memory_Device = "1";
+            Is_Readable = "1";
+            Is_Writable = "1";
+            Minimum_Uninterrupted_Run_Length = "1";
+         }
+         COMPONENT_BUILDER 
+         {
+            AVS_SETTINGS 
+            {
+               Setup_Value = "0";
+               Read_Wait_Value = "1";
+               Write_Wait_Value = "1";
+               Hold_Value = "0";
+               Timing_Units = "cycles";
+               Read_Latency_Value = "1";
+               Minimum_Arbitration_Shares = "1";
+               Active_CS_Through_Read_Latency = "0";
+               Max_Pending_Read_Transactions_Value = "1";
+               Address_Alignment = "dynamic";
+               Is_Printable_Device = "0";
+               Interleave_Bursts = "0";
+               interface_name = "Avalon Slave";
+               external_wait = "1";
+               Is_Memory_Device = "1";
+            }
+         }
+         PORT_WIRING 
+         {
+            PORT avalon_address
+            {
+               width = "-1";
+               width_expression = "((ADDR_BITS - 1)) - (0) + 1";
+               direction = "input";
+               type = "address";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_byteenable
+            {
+               width = "-1";
+               width_expression = "((BYTE_EN_BITS - 1)) - (0) + 1";
+               direction = "input";
+               type = "byteenable";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_chipselect
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "chipselect";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_read
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "read";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_write
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "write";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_writedata
+            {
+               width = "-1";
+               width_expression = "((DATA_BITS - 1)) - (0) + 1";
+               direction = "input";
+               type = "writedata";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_readdata
+            {
+               width = "-1";
+               width_expression = "((DATA_BITS - 1)) - (0) + 1";
+               direction = "output";
+               type = "readdata";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avalon_waitrequest
+            {
+               width = "1";
+               width_expression = "";
+               direction = "output";
+               type = "waitrequest";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT acknowledge
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT address
+            {
+               width = "32";
+               width_expression = "";
+               direction = "output";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT bus_enable
+            {
+               width = "1";
+               width_expression = "";
+               direction = "output";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT byte_enable
+            {
+               width = "-1";
+               width_expression = "((BYTE_EN_BITS - 1)) - (0) + 1";
+               direction = "output";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT rw
+            {
+               width = "1";
+               width_expression = "";
+               direction = "output";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT write_data
+            {
+               width = "-1";
+               width_expression = "((DATA_BITS - 1)) - (0) + 1";
+               direction = "output";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT read_data
+            {
+               width = "-1";
+               width_expression = "((DATA_BITS - 1)) - (0) + 1";
+               direction = "input";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+         }
+      }
+   }
+   USER_INTERFACE 
+   {
+      USER_LABELS 
+      {
+         name = "Avalon to External Bus Bridge";
+		 technology = "University Program DE1 Board,University Program DE2 Board";
+      }
+      WIZARD_UI the_wizard_ui
+      {
+         title = "UP Avalon to External Bus Bridge - {{ $MOD }}";
+         CONTEXT 
+         {
+			WSA="WIZARD_SCRIPT_ARGUMENTS";
+            H = "WIZARD_SCRIPT_ARGUMENTS/hdl_parameters";
+            M = "";
+            SBI_global_signals = "SYSTEM_BUILDER_INFO";
+            SBI_avalon_slave = "SLAVE avalon_slave/SYSTEM_BUILDER_INFO";
+            # The following signals have parameterized widths:
+            PORT_avalon_address = "SLAVE avalon_slave/PORT_WIRING/PORT avalon_address";
+            PORT_avalon_byteenable = "SLAVE avalon_slave/PORT_WIRING/PORT avalon_byteenable";
+            PORT_avalon_writedata = "SLAVE avalon_slave/PORT_WIRING/PORT avalon_writedata";
+            PORT_avalon_readdata = "SLAVE avalon_slave/PORT_WIRING/PORT avalon_readdata";
+            PORT_byte_enable = "SLAVE avalon_slave/PORT_WIRING/PORT byte_enable";
+            PORT_write_data = "SLAVE avalon_slave/PORT_WIRING/PORT write_data";
+            PORT_read_data = "SLAVE avalon_slave/PORT_WIRING/PORT read_data";
+         }
+			# Modify the peripherals parameters
+
+			$H/addr_bits = "{{ log2(($WSA/Size_Value * $WSA/Size_Multiple) / ($H/data_bits / 8)) }}";
+
+			$H/addr_low = "{{ ceil(log2($H/data_bits / 8)) }}";
+			$H/byte_en_bits = "{{ ($H/data_bits / 8) }}";
+
+
+			error = "{{
+				if (($WSA/Size_Value * $WSA/Size_Multiple) <= ($H/data_width / 8))
+					'The data width must be less than the depth';
+				else
+					'';
+				}}";
+
+
+			# Inform SOPC Builder what is the width and 
+			#   depth of the memory mapped peripheral                       
+
+			$PORT_avalon_address/width = "{{ $H/addr_bits; }}";
+			$PORT_avalon_byteenable/width = "{{ $H/byte_en_bits; }}";
+			$PORT_avalon_writedata/width = "{{ $H/data_bits; }}";
+			$PORT_avalon_readdata/width = "{{ $H/data_bits; }}";
+			$PORT_byte_enable/width = "{{ $H/byte_en_bits; }}";
+			$PORT_write_data/width = "{{ $H/data_bits; }}";
+			$PORT_read_data/width = "{{ $H/data_bits; }}";
+
+			$SBI_avalon_slave/Address_Width = "{{ $H/addr_bits; }}";
+			$SBI_avalon_slave/Data_Width = "{{ $H/data_bits; }}";
+
+			GROUP
+			{
+				GROUP size
+				{
+					layout = "grid";
+					title = "Size";
+					spacing = 10;
+					rows = 2;
+					columns = 3;
+					TEXT 
+					{ 
+						align="right"; 
+						title = "Data Width:";
+					}
+					COMBO
+					{
+						align="right"; 
+						id = "width";
+						columns  = "6";
+						values = "128,64,32,16,8";
+						DATA 
+						{
+							$H/data_bits = "$";
+						}
+					}
+					TEXT 
+					{
+						align = "left";
+						title = "bits"; 
+					}
+					TEXT 
+					{
+						align = "right";
+						title = "Address Range:"; 
+					}
+					COMBO
+					{
+						align="right"; 
+						id = "size";
+						columns  = "6";
+						justify  = "right";
+						values = "1024,512,256,128,64,32,16,8,4,2,1";
+						DATA 
+						{
+							$WSA/Size_Value = "$";
+						}
+					}
+					COMBO
+					{
+						glue = 0;
+						align = "left";
+						id = "units";
+						ITEM { title="Mbytes"; DATA { $WSA/Size_Multiple = 1048576; }}
+						ITEM { title="Kbytes"; DATA { $WSA/Size_Multiple = 1024; }}
+						ITEM { title="bytes";  DATA { $WSA/Size_Multiple =    1; }}
+					}
+				}
+			}
+		}
+	}
+   SOPC_Builder_Version = "6.00";
+   COMPONENT_BUILDER 
+   {
+      HDL_PARAMETERS 
+      {
+         # generated by CBDocument.getParameterContainer
+         # used only by Component Editor
+         HDL_PARAMETER addr_bits
+         {
+            parameter_name = "ADDR_BITS";
+            type = "integer";
+            default_value = "18";
+            editable = "1";
+            tooltip = "";
+         }
+         HDL_PARAMETER data_bits
+         {
+            parameter_name = "DATA_BITS";
+            type = "integer";
+            default_value = "16";
+            editable = "1";
+            tooltip = "";
+         }
+         HDL_PARAMETER addr_low
+         {
+            parameter_name = "ADDR_LOW";
+            type = "integer";
+            default_value = "1";
+            editable = "1";
+            tooltip = "";
+         }
+         HDL_PARAMETER byte_en_bits
+         {
+            parameter_name = "BYTE_EN_BITS";
+            type = "integer";
+            default_value = "2";
+            editable = "1";
+            tooltip = "";
+         }
+      }
+      SW_FILES 
+      {
+      }
+      built_on = "2006.09.20.10:51:54";
+      CACHED_HDL_INFO 
+      {
+         # cached hdl info, emitted by CBFrameRealtime.getDocumentCachedHDLInfoSection
+         # used only by Component Builder
+         FILE Altera_UP_Avalon_to_External_Bus_Bridge.v
+         {
+            file_mod = "Wed Sep 20 10:41:52 EDT 2006";
+            quartus_map_start = "Wed Sep 20 10:48:35 EDT 2006";
+            quartus_map_finished = "Wed Sep 20 10:48:48 EDT 2006";
+            #found 1 valid modules
+            WRAPPER Altera_UP_Avalon_to_External_Bus_Bridge
+            {
+               CLASS Altera_UP_Avalon_to_External_Bus_Bridge
+               {
+                  CB_GENERATOR 
+                  {
+                     HDL_FILES 
+                     {
+                        FILE 
+                        {
+                           use_in_simulation = "1";
+                           use_in_synthesis = "1";
+                           type = "";
+                           filepath = "D:/MyWork/IP/InProgress/altera_up_avalon_to_external_bus_bridge/hdl/Altera_UP_Avalon_to_External_Bus_Bridge.v";
+                        }
+                     }
+                     top_module_name = "Altera_UP_Avalon_to_External_Bus_Bridge";
+                     emit_system_h = "0";
+                  }
+                  MODULE_DEFAULTS global_signals
+                  {
+                     class = "Altera_UP_Avalon_to_External_Bus_Bridge";
+                     class_version = "1.0";
+                     SYSTEM_BUILDER_INFO 
+                     {
+                        Instantiate_In_System_Module = "1";
+                     }
+                     SLAVE avalon
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT avalon_address
+                           {
+                              width = "-1";
+                              width_expression = "((ADDR_BITS - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "address";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_byteenable
+                           {
+                              width = "-1";
+                              width_expression = "((BYTE_EN_BITS - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "byteenable";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_chipselect
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "chipselect";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_read
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "read";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_write
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "write";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_writedata
+                           {
+                              width = "-1";
+                              width_expression = "((DATA_BITS - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "writedata";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_readdata
+                           {
+                              width = "-1";
+                              width_expression = "((DATA_BITS - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "readdata";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_waitrequest
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "waitrequest";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     SLAVE avalon_slave_0
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT acknowledge
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT address
+                           {
+                              width = "32";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT bus_enable
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT byte_enable
+                           {
+                              width = "-1";
+                              width_expression = "((BYTE_EN_BITS - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT rw
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT write_data
+                           {
+                              width = "-1";
+                              width_expression = "((DATA_BITS - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     SLAVE data
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT read_data
+                           {
+                              width = "-1";
+                              width_expression = "((DATA_BITS - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "read";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     PORT_WIRING 
+                     {
+                        PORT clk
+                        {
+                           width = "1";
+                           width_expression = "";
+                           direction = "input";
+                           type = "clk";
+                           is_shared = "0";
+                           vhdl_record_name = "";
+                           vhdl_record_type = "";
+                        }
+                        PORT reset
+                        {
+                           width = "1";
+                           width_expression = "";
+                           direction = "input";
+                           type = "reset";
+                           is_shared = "0";
+                           vhdl_record_name = "";
+                           vhdl_record_type = "";
+                        }
+                     }
+                  }
+                  USER_INTERFACE 
+                  {
+                     USER_LABELS 
+                     {
+                        name = "Altera_UP_Avalon_to_External_Bus_Bridge";
+                        technology = "imported components";
+                     }
+                  }
+                  SOPC_Builder_Version = "0.0";
+                  COMPONENT_BUILDER 
+                  {
+                     HDL_PARAMETERS 
+                     {
+                        # generated by CBDocument.getParameterContainer
+                        # used only by Component Editor
+                        HDL_PARAMETER addr_bits
+                        {
+                           parameter_name = "ADDR_BITS";
+                           type = "integer";
+                           default_value = "18";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER data_bits
+                        {
+                           parameter_name = "DATA_BITS";
+                           type = "integer";
+                           default_value = "16";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER addr_low
+                        {
+                           parameter_name = "ADDR_LOW";
+                           type = "integer";
+                           default_value = "1";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER byte_en_bits
+                        {
+                           parameter_name = "BYTE_EN_BITS";
+                           type = "integer";
+                           default_value = "2";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         FILE Altera_UP_Avalon_to_External_Bus_Bridge.vhd
+         {
+            file_mod = "Wed Sep 20 10:49:41 EDT 2006";
+            quartus_map_start = "Wed Sep 20 10:49:41 EDT 2006";
+            quartus_map_finished = "Wed Sep 20 10:49:53 EDT 2006";
+            #found 1 valid modules
+            WRAPPER altera_up_avalon_to_external_bus_bridge
+            {
+               CLASS altera_up_avalon_to_external_bus_bridge
+               {
+                  CB_GENERATOR 
+                  {
+                     HDL_FILES 
+                     {
+                        FILE 
+                        {
+                           use_in_simulation = "1";
+                           use_in_synthesis = "1";
+                           type = "";
+                           filepath = "D:/MyWork/IP/InProgress/altera_up_avalon_to_external_bus_bridge/hdl/Altera_UP_Avalon_to_External_Bus_Bridge.vhd";
+                        }
+                     }
+                     top_module_name = "altera_up_avalon_to_external_bus_bridge";
+                     emit_system_h = "0";
+                     LIBRARIES 
+                     {
+                        library = "ieee.std_logic_1164.all";
+                        library = "ieee.std_logic_unsigned.all";
+                        library = "std.standard.all";
+                     }
+                  }
+                  MODULE_DEFAULTS global_signals
+                  {
+                     class = "altera_up_avalon_to_external_bus_bridge";
+                     class_version = "1.0";
+                     SYSTEM_BUILDER_INFO 
+                     {
+                        Instantiate_In_System_Module = "1";
+                     }
+                     SLAVE avalon
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT avalon_address
+                           {
+                              width = "-1";
+                              width_expression = "((addr_bits - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "address";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_byteenable
+                           {
+                              width = "-1";
+                              width_expression = "((byte_en_bits - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "byteenable";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_chipselect
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "chipselect";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_read
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "read";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_write
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "write";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_writedata
+                           {
+                              width = "-1";
+                              width_expression = "((data_bits - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "writedata";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_readdata
+                           {
+                              width = "-1";
+                              width_expression = "((data_bits - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "readdata";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avalon_waitrequest
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "waitrequest";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     SLAVE avalon_slave_0
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT acknowledge
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT address
+                           {
+                              width = "32";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT bus_enable
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT byte_enable
+                           {
+                              width = "-1";
+                              width_expression = "((byte_en_bits - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT rw
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT write_data
+                           {
+                              width = "-1";
+                              width_expression = "((data_bits - 1)) - (0) + 1";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     SLAVE data
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT read_data
+                           {
+                              width = "-1";
+                              width_expression = "((data_bits - 1)) - (0) + 1";
+                              direction = "input";
+                              type = "read";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     PORT_WIRING 
+                     {
+                        PORT clk
+                        {
+                           width = "1";
+                           width_expression = "";
+                           direction = "input";
+                           type = "clk";
+                           is_shared = "0";
+                           vhdl_record_name = "";
+                           vhdl_record_type = "";
+                        }
+                        PORT reset
+                        {
+                           width = "1";
+                           width_expression = "";
+                           direction = "input";
+                           type = "reset";
+                           is_shared = "0";
+                           vhdl_record_name = "";
+                           vhdl_record_type = "";
+                        }
+                     }
+                  }
+                  USER_INTERFACE 
+                  {
+                     USER_LABELS 
+                     {
+                        name = "altera_up_avalon_to_external_bus_bridge";
+                        technology = "imported components";
+                     }
+                  }
+                  SOPC_Builder_Version = "0.0";
+                  COMPONENT_BUILDER 
+                  {
+                     HDL_PARAMETERS 
+                     {
+                        # generated by CBDocument.getParameterContainer
+                        # used only by Component Editor
+                        HDL_PARAMETER addr_bits
+                        {
+                           parameter_name = "addr_bits";
+                           type = "integer";
+                           default_value = "18";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER data_bits
+                        {
+                           parameter_name = "data_bits";
+                           type = "integer";
+                           default_value = "16";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER addr_low
+                        {
+                           parameter_name = "addr_low";
+                           type = "integer";
+                           default_value = "1";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                        HDL_PARAMETER byte_en_bits
+                        {
+                           parameter_name = "byte_en_bits";
+                           type = "integer";
+                           default_value = "2";
+                           editable = "1";
+                           tooltip = "";
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   ASSOCIATED_FILES 
+   {
+      Add_Program = "the_wizard_ui";
+      Edit_Program = "the_wizard_ui";
+      Generator_Program = "cb_generator.pl";
+   }
+}

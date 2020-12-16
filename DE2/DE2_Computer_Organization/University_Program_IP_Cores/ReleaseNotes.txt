@@ -1,0 +1,32 @@
+====================
+== General Notese == 
+====================
+Altera University Program IP Cores installer can be downloaded at
+ftp://ftp.altera.com/up/University_Program_IP_Cores/UP_IP_Library.exe. 
+For new releases information, please check the Release Notes at 
+ftp://ftp.altera.com/up/University_Program_IP_Cores/ReleaseNotes.txt. It will show the newest
+release and other relevant information.
+
+The installer will install all University Program IP Cores into the SOPC
+Builder's component directory.
+
+Please note that a new release may upgrade the existing IP Cores by
+OVERWRITING them. And the uninstaller will uninstall University Program
+IP Cores from ALL pervious release(s).
+
+====================
+== Release Beta 1 == 
+====================
+- Release Date: Nov 3, 2006
+- Initial Release 
+- New IP Cores 
+	* DE PIO 
+	* Avalon to External Bus Bridge 
+	* External Bus to Avalon Bridge
+	* SRAM Controller
+	For details of the usage of each IP Core, please see the doc directory
+	inside the IP Core directory. All the IP Core directory can be easily
+	accessed at [Start Menu] - [Altera] - [Altera University Program IP Cores].
+- Upgraded IP Cores
+	* No upgraded IP Cores for the initial release.
+
