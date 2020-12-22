@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all; 
+entity RISC_CPU_TPO1 is
+port( clk : in std_logic;
+      reset : in std_logic;     
+halt : out std_logic);
+end RISC_CPU_TPO1;
+architecture instu of RISC_CPU_TPO1 is
+component RISC_CPU2 is
+port(clk,reset :in std_logic;
+     data : inout std_logic_vector(7 downto 0);
+	  rd,wr,halt : out std_logic;
+	  addr: out std_logic_vector(12 downto 0));
+end component;
+component addr_decoder is
+port(addr : in std_logic_vector(12 downto 0);
+     rom_sel,ram_sel : out std_logic);
+end component;
+component ram is
+port (ena : in std_logic;
+      writein,readout : in std_logic;
+		data : inout std_logic_vector(7 downto 0);
+		addr : in std_logic_vector(9 downto 0));
+end component;
+component rom is
+port (ena : in std_logic;
+      readout : in std_logic;
+		data : out std_logic_vector(7 downto 0);
+		addr : in std_logic_vector(12 downto 0));
+end component;
+signal carry_rom_sel,carry_ram_sel : std_logic;
+signal carry_write,carry_read : std_logic;
+signal carry_data1 : std_logic_vector(7 downto 0);
+signal carry_addr : std_logic_vector (12 downto 0);
+begin
+U0:RISC_CPU2 port map (clk,reset,carry_data1,carry_read,carry_write,
+                       halt,carry_addr);
+U1:addr_decoder port map (carry_addr,carry_rom_sel,carry_ram_sel);
+U2:ram port map (carry_ram_sel,carry_write,carry_read,carry_data1,
+                  carry_addr(9 downto 0));
+U3:rom port map (carry_rom_sel,carry_read,carry_data1,carry_addr);
+end instu

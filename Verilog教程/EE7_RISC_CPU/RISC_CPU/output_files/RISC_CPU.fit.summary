@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Mar 08 10:45:40 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : RISC_CPU
+Top-level Entity Name : RISC_CPU_TPO1
+Family : Cyclone II
+Device : EP2C5T144C6
+Timing Models : Final
+Total logic elements : 2,975 / 4,608 ( 65 % )
+    Total combinational functions : 2,080 / 4,608 ( 45 % )
+    Dedicated logic registers : 2,118 / 4,608 ( 46 % )
+Total registers : 2118
+Total pins : 3 / 89 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 2 / 26 ( 8 % )
+Total PLLs : 0 / 2 ( 0 % )

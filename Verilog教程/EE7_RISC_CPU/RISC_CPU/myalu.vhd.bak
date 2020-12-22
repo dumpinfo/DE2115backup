@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity myalu is
+port(alu_clk : in std_logic;
+     accum,data : in std_logic_vector(7 downto 0);
+	  opcode : in std_logic_vector(2 downto 0);
+	  zero : out std_logic;
+	  alu_out: out std_logic_vector(7 downto 0));
+end myalu;
+architecture behav of myalu is
+begin
+zero<='1' when accum="00000000" else
+      '0' ;
+process(alu_clk)
+begin
+if (rising_edge(alu_clk)) then
+case opcode is
+when "000"=>alu_out<=accum;--HLT
+when "001"=>alu_out<=accum;--SKZ
+when "010"=>alu_out<=data+accum;--ADD
+when "011"=>alu_out<=data and accum;--ANDD
+when "100"=>alu_out<=data xor accum;--XORR
+when "101"=>alu_out<=data;--LDA
+when "110"=>alu_out<=accum;--STO
+when "111"=>alu_out<=accum;--JMP
+when others => alu_out<="XXXXXXXX";
+end case;
+end if;
+end process;
+end behav;

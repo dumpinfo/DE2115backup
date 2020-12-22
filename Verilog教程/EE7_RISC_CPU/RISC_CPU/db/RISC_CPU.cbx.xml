@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="RISC_CPU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_CPU_TPO1|RISC_CPU:U0|myalu:U3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_5dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_CPU_TPO1|RISC_CPU:U0|myalu:U3|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_5dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_CPU_TPO1|RISC_CPU:U0|myalu:U3|lpm_mult:Mult0" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_CPU_TPO1|RISC_CPU:U0|myalu:U3|lpm_mult:Mult1" CBX_FILE_NAME="mult_o5t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

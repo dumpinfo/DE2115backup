@@ -1,0 +1,23 @@
+
+State Machine - |RISC_CPU_TPO1|RISC_CPU:U0|machine:U5|\main:state
+Name \main:state.clk_7 \main:state.clk_6 \main:state.clk_5 \main:state.clk_4 \main:state.clk_3 \main:state.clk_2 \main:state.clk_1 \main:state.clk_0 
+\main:state.clk_0 0 0 0 0 0 0 0 0 
+\main:state.clk_1 0 0 0 0 0 0 1 1 
+\main:state.clk_2 0 0 0 0 0 1 0 1 
+\main:state.clk_3 0 0 0 0 1 0 0 1 
+\main:state.clk_4 0 0 0 1 0 0 0 1 
+\main:state.clk_5 0 0 1 0 0 0 0 1 
+\main:state.clk_6 0 1 0 0 0 0 0 1 
+\main:state.clk_7 1 0 0 0 0 0 0 1 
+
+State Machine - |RISC_CPU_TPO1|RISC_CPU:U0|clkgen:U0|pr_state
+Name pr_state.c7 pr_state.c6 pr_state.c5 pr_state.c4 pr_state.c3 pr_state.c2 pr_state.c1 pr_state.c0 pr_state.idle 
+pr_state.idle 0 0 0 0 0 0 0 0 0 
+pr_state.c0 0 0 0 0 0 0 0 1 1 
+pr_state.c1 0 0 0 0 0 0 1 0 1 
+pr_state.c2 0 0 0 0 0 1 0 0 1 
+pr_state.c3 0 0 0 0 1 0 0 0 1 
+pr_state.c4 0 0 0 1 0 0 0 0 1 
+pr_state.c5 0 0 1 0 0 0 0 0 1 
+pr_state.c6 0 1 0 0 0 0 0 0 1 
+pr_state.c7 1 0 0 0 0 0 0 0 1 

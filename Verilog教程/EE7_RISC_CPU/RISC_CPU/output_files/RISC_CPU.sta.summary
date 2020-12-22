@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : -24.661
+TNS   : -167.317
+
+Type  : Slow Model Setup 'RISC_CPU:U0|machine:U5|wr'
+Slack : -13.152
+TNS   : -24171.208
+
+Type  : Slow Model Setup 'clk'
+Slack : -10.749
+TNS   : -288.845
+
+Type  : Slow Model Setup 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : -1.602
+TNS   : -15.395
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.702
+TNS   : -3.201
+
+Type  : Slow Model Hold 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : 0.725
+TNS   : 0.000
+
+Type  : Slow Model Hold 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : 0.806
+TNS   : 0.000
+
+Type  : Slow Model Hold 'RISC_CPU:U0|machine:U5|wr'
+Slack : 1.905
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.423
+TNS   : -96.916
+
+Type  : Slow Model Minimum Pulse Width 'RISC_CPU:U0|machine:U5|wr'
+Slack : -0.500
+TNS   : -2048.000
+
+Type  : Slow Model Minimum Pulse Width 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : -0.500
+TNS   : -11.000
+
+Type  : Slow Model Minimum Pulse Width 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Slow Model Minimum Pulse Width 'RISC_CPU:U0|clkgen:U0|pr_state.c4'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Setup 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : -10.352
+TNS   : -70.375
+
+Type  : Fast Model Setup 'RISC_CPU:U0|machine:U5|wr'
+Slack : -5.686
+TNS   : -10269.107
+
+Type  : Fast Model Setup 'clk'
+Slack : -4.192
+TNS   : -107.368
+
+Type  : Fast Model Setup 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : -0.557
+TNS   : -5.150
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.049
+TNS   : -2.084
+
+Type  : Fast Model Hold 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast Model Hold 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast Model Hold 'RISC_CPU:U0|machine:U5|wr'
+Slack : 0.546
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.519
+TNS   : -99.988
+
+Type  : Fast Model Minimum Pulse Width 'RISC_CPU:U0|machine:U5|wr'
+Slack : -0.500
+TNS   : -2048.000
+
+Type  : Fast Model Minimum Pulse Width 'RISC_CPU:U0|machine:U5|inc_pc'
+Slack : -0.500
+TNS   : -11.000
+
+Type  : Fast Model Minimum Pulse Width 'RISC_CPU:U0|clkgen:U0|pr_state.c1'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'RISC_CPU:U0|clkgen:U0|pr_state.c4'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------
